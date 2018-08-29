@@ -116,10 +116,10 @@
                 <a href="/"><img src="img/logo.svg" style="height: 70px; padding-top:10px" /></a>
             </div>
             <div class="col-md-7" style="padding-top:20px">
-                    <a href="/integration" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Integration &nbsp &nbsp</h2></a>
-                    <a href="/faq" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Payment Methods &nbsp &nbsp</h2></a>
-                    <a href="/faq" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Risk & Fraud &nbsp &nbsp</h2></a>
-                    <a href="/merchantcenter" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Merchant Center &nbsp &nbsp</h2></a>
+                    <a href="/integration" style="padding-top:5px; display:inline;"><h2 ng-if="site=='integration'" style="color: #DA4405; display:inline;">Integration &nbsp &nbsp</h2><h2 ng-if="site!='integration'" style="color: grey; display:inline;">Integration &nbsp &nbsp</h2></a>
+                    <a href="/faq" style="padding-top:5px; display:inline;"><h2 ng-if="site=='pmm'"style="color: #DA4405; display:inline;">Payment Methods &nbsp &nbsp</h2><h2 ng-if="site!='pmm'"style="color: grey; display:inline;">Payment Methods &nbsp &nbsp</h2></a>
+                    <a href="/faq" style="padding-top:5px; display:inline;"><h2 ng-if="site=='rf'" style="color: #DA4405; display:inline;">Risk & Fraud &nbsp &nbsp</h2><h2 ng-if="site!='rf'" style="color: grey; display:inline;">Risk & Fraud &nbsp &nbsp</h2></a>
+                    <a href="/merchantcenter" style="padding-top:5px; display:inline;"><h2 ng-if="site=='mc'"style="color: #DA4405; display:inline;">Merchant Center &nbsp &nbsp</h2><h2 ng-if="site!='mc'"style="color: grey; display:inline;">Merchant Center &nbsp &nbsp</h2></a>
                     <a href="/faq" class="pull-right" style="padding-top:5px; display:inline;"><p style="color: #DA4405; display:inline;">FAQ</p></a>
             </div>
             <div class="col-md-2">

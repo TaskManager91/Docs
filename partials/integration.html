@@ -65,10 +65,20 @@
         </div>
         <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#manageorders">Manage orders</a>
         <div id="manageorders" class="collapse" >
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/preauth" > &nbsp  - Preauth</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Debit</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Credit</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Cancel</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Capture</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Refund</a><br>
+            <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#maintanancemethods"> &nbsp - Maintenance methods</a>
+            <div id="maintanancemethods" class="collapse" >
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  &nbsp - Amounts</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp &nbsp - Dates</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp &nbsp  - Currencies</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp &nbsp  - Countries</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp &nbsp  - Encoding</a><br>
+            </div>
         </div>
         <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#managecustomers">Manage customers</a>
         <div id="managecustomers" class="collapse" >

@@ -14,7 +14,7 @@ angular.module('StudyCraneApp',[
   $locationProvider.html5Mode(true).hashPrefix('!');
 
 	$routeProvider
-	.when('/', {templateUrl: 'partials/selectSolution.html', controller:'selectSolutionCtrl'})
+	.when('/', {templateUrl: 'partials/integration.html', controller:'integrationCtrl'})
   .when('/search', {templateUrl: 'partials/search.html', controller:'searchCtrl'})
   .when('/search/:term', {templateUrl: 'partials/search.html', controller:'searchCtrl'})
   .when('/buildyourown', {templateUrl: 'partials/buildyourown.html'})
