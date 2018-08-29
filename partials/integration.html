@@ -1,17 +1,6 @@
 <div class="row">
-    <div class="col-md-1">
-    </div>
-    <div class="col-md-10">
-
-        <br>
-    </div>
-    <div class="col-md-1">
-    </div>
-</div>
-<div class="row">
-    <br>
+    <hr>
     <div ng-init="menu=true;" class="col-md-2 btn-group-vertical">
-        <hr>
         <h3 style="color: #DA4405;"><b> &nbsp Getting started</b></h3>
         <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#introduction">Introduction</a>
         <div id="introduction" class="collapse in" >
@@ -101,7 +90,7 @@
             <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
             <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
         </div>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Healthcheck</a>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/health" > Healthcheck</a>
         <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#errorhandling">Error Handling</a>
         <div id="errorhandling" class="collapse" >
             <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
@@ -111,17 +100,17 @@
         </div>
         <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Testing</a>
     </div>
-    <div class="col-md-8">
+    <div class="col-md-10">
         <div ng-show="cur=='generaldescription'">
             <div  ng-include="'/partials/integration/generaldescription.html'">
             </div>
         </div>
-        <div ng-show="cur=='login'">
-            <div  ng-include="'/partials/merchant/login.html'">
+        <div ng-show="cur=='preauth'">
+            <div  ng-include="'/partials/integration/preauth.html'">
             </div>
         </div>
-        <div ng-show="cur=='navigation'">
-           <div  ng-include="'/partials/merchant/navigation.html'">
+        <div ng-show="cur=='health'">
+           <div  ng-include="'/partials/integration/health.html'">
             </div>
         </div>
         <div ng-show="cur=='dashboard'">
@@ -216,7 +205,5 @@
             <div  ng-include="'/partials/merchant/errortransaction.html'">
             </div>
         </div>
-    </div>
-    <div class="col-md-2">
     </div>
 </div>

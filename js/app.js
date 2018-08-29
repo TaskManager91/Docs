@@ -37,6 +37,7 @@ angular.module('StudyCraneApp',[
   .when('/contact', {templateUrl: 'partials/contact.html'})
   .when('/merchantcenter', {templateUrl: 'partials/merchantcenter.html', controller:'merchantcenterCtrl'})
   .when('/integration', {templateUrl: 'partials/integration.html', controller:'integrationCtrl'})
+  .when('/integration/:id', {templateUrl: 'partials/integration.html', controller:'integrationCtrl'})
   .when('/merchantcenter/:id', {templateUrl: 'partials/merchantcenter.html', controller:'merchantcenterCtrl'});
 
 	$httpProvider.defaults.useXDomain = true;
