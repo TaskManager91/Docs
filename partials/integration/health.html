@@ -1,7 +1,69 @@
 <div class="row">
 	<div class="col-md-7">
-		<h1>health</h1>
+		<h1>/Health</h1>
+		<br>
+		<h3>Endpoint that reports an aggregated boolean value</h3>
+		<p>Endpoint that reports an aggregated boolean value describing the general health of the system.</p>
+		<br>
+		<hr>
+		<h4>Responses</h4>
+		<br>
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+				<div style="background-color: rgba(0, 170, 19, 0.1);">
+					<br>
+					<p style="color:rgb(0, 170, 19);">&nbsp &nbsp &nbsp<b>&nbsp 200</b> &nbsp The system health is successfully measured.</p>
+					<br>
+				</div>
+				<br>
+				<div style="background-color: rgba(229, 57, 53, 0.1);">
+					<br>
+					<p style="color: rgba(229, 57, 53);">&nbsp &nbsp &nbsp<b>&nbsp 403</b> &nbsp The health endpoint is disabled via configuration.</p>
+					<br>
+				</div>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		
 	</div>
 	<div class="col-md-5" style="background-color: #3e4855">
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+				<br>
+				<br>
+				<h2 style="color:white;"><a class="btn btn-success" type="button" style="padding-left: 15px; padding-right: 15px;">GET</a>/Health</h2>
+				<br>
+				<br>
+				<h3 style="color:white;">Response Samples</h3>
+				<h2 style="color:#2ecc71;">200</h2>
+				<br>
+				<div class="row" style="background-color:#171e21;">
+					<br>
+					<div class="col-md-1">
+					</div>
+					<div class="col-md-10">
+						<p style="color:white;">application/json</p>
+						<hr>
+						<p style="color:white;">{</p>
+						<p style="color:#a0fbaa; display:inline;">&nbsp  &nbsp  &nbsp  &nbsp "systemHealth"</p><p style="color:white; display:inline;">:</p><p style="color:#a0fbaa; display:inline;"> "GOOD"</p>
+						<p style="color:white;">}</p>
+						<br>
+					</div>
+					<div class="col-md-1">
+					</div>
+					<br>
+				</div>
+				<br>
+				<br>
+				<br>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
 	</div>
 </div>
