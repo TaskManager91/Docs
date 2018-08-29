@@ -6,7 +6,7 @@
 		<p>Endpoint that reports an aggregated boolean value describing the general health of the system.</p>
 		<br>
 		<hr>
-		<h4>Responses</h4>
+		<h3>Responses</h3>
 		<br>
 		<div class="row">
 			<div class="col-md-1">
@@ -27,7 +27,25 @@
 			<div class="col-md-1">
 			</div>
 		</div>
-		
+		<br>
+		<h3>Javascript (HttpRequest)</h3>
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+				<br>
+	<code style="display:block;white-space:pre-wrap">
+	var xhr = new XMLHttpRequest();
+	var url = "https://apitest.payengine.de/v1/health"; //Payengine API Health Endpoint 
+	xhr.open("POST", url, true);    //GET request
+	xhr.setRequestHeader("Content-Type", "application/json"); //Content-Type: Json
+	xhr.setRequestHeader("Authorization","Basic  "); //Authorization in base64
+	xhr.send();
+	</code>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
 	</div>
 	<div class="col-md-5" style="background-color: #3e4855">
 		<div class="row">
