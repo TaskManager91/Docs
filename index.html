@@ -109,21 +109,26 @@
 
 <body ng-controller="mainCtrl" >
     <div class="main-header wow fadeInDown">
-        <div class="container">
-            <div class="col-md-4">
-                <a href="/"><img src="img/logo.svg" style="height: 50px; padding-top:10px" /></a>
+        <div class="row">
+            <div class="col-md-2">
+                <a href="/"><img src="img/logo.svg" style="height: 70px; padding-top:10px" /></a>
             </div>
-            <div class="col-md-3">
+            <div class="col-md-7" style="padding-top:20px">
+                    <a href="/integration" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Integration &nbsp &nbsp</h2></a>
+                    <a href="/faq" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Payment Methods &nbsp &nbsp</h2></a>
+                    <a href="/faq" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Risk & Fraud &nbsp &nbsp</h2></a>
+                    <a href="/merchantcenter" style="padding-top:5px; display:inline;"><h2 style="color: #DA4405; display:inline;">Merchant Center &nbsp &nbsp</h2></a>
+                    <a href="/faq" class="pull-right" style="padding-top:5px; display:inline;"><p style="color: #DA4405; display:inline;">FAQ</p></a>
             </div>
-            <div class="col-md-3">
-                <form ng-hide="site=='search'" ng-submit="openSearch()" class="input-group" style="padding-top:20px;">
+            <div class="col-md-2">
+                <form ng-hide="site=='search'" ng-submit="openSearch()" class="input-group" style="padding-top:20px; padding-bottom:10px;">
                     <input type="text" class="form-control" ng-model="searchString" placeholder="Search for...">
                     <span class="input-group-btn">
                          <button class="btn btn-default" type="button" ng-click="openSearch()"><span class="glyph-icon icon-search" style="color: #DA4405;"></span> Go!</button>
                     </span>
                 </form>
             </div>
-             <div class="col-md-2" style="padding-top:20px">
+             <div class="col-md-1" style="padding-top:20px">
                 <!--<a type="button" class="btn btn-light text-left" href="/contact" style="padding-top:16px;"><p style="font-size:22px;">Contact us</p></a>-->
                 <a href="/contact">
                     <button class="btn btn-default" type="button" ><p style="color: #DA4405;">Contact us</p></button>

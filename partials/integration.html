@@ -12,8 +12,13 @@
     <br>
     <div ng-init="menu=true;" class="col-md-2 btn-group-vertical">
         <hr>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/registration"><h3 ng-if="cur=='registration'" style="color: #DA4405;"><b>Registration</b></h3><h3 ng-if="cur!='registration'"><b>Registration</b></h3></a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/login"><p ng-if="cur=='login'" style="color: #DA4405;">Login</p><p ng-if="cur!='login'">Login</p></a>
+        <h3 style="color: #DA4405;"><b> Getting started</b></h3>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left" data-target="#introduction">Introduction</a>
+        <div id="introduction" class="collapse">
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/navigation">  General Description</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/dashboard">  Integration Options</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/createtransaction">  Onboarding process</a><br>
+        </div>
         <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/navigation">Navigation</a>
         <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/dashboard">Dashboard</a>
         <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/createtransaction">Orders - Create </a>
