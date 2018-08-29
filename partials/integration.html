@@ -12,44 +12,98 @@
     <br>
     <div ng-init="menu=true;" class="col-md-2 btn-group-vertical">
         <hr>
-        <h3 style="color: #DA4405;"><b> Getting started</b></h3>
-        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left" data-target="#introduction">Introduction</a>
-        <div id="introduction" class="collapse">
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/navigation">  General Description</a><br>
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/dashboard">  Integration Options</a><br>
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/createtransaction">  Onboarding process</a><br>
+        <h3 style="color: #DA4405;"><b> &nbsp Getting started</b></h3>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#introduction">Introduction</a>
+        <div id="introduction" class="collapse in" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - General Description</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Integration Options</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Onboarding process</a><br>
         </div>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/navigation">Navigation</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/dashboard">Dashboard</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/createtransaction">Orders - Create </a>
-        <!-- <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/transactionoperations">Orders - Operation </a> -->
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/errortransaction">Orders - Errors </a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/currencies"> Currencies</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/settlement">Settlements</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/customer">Customers</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/createcustomer">Manage customers</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/myaccount">My Account</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/paymentmethods">Payment Methods</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/managebaskets">Manage baskets</a>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#datamodel">Data model</a>
+        <div id="datamodel" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - What is a payment instrument?</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - What is an order?</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - What is a transaction?</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - What is a customer?</a><br>
+            <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#datatypes"> &nbsp - Data types</a>
+            <div id="datatypes" class="collapse" >
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  &nbsp - Amounts</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp &nbsp - Dates</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp &nbsp  - Currencies</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp &nbsp  - Countries</a><br>
+                <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp &nbsp  - Encoding</a><br>
+            </div>
+        </div>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#processflows">Process flows</a>
+        <div id="processflows" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Pre-auth & capture vs. debit</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Recurring payments</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Syncrounus vs. asyncrounus</a><br>
+        </div>
         <hr>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/usermanagement"><h3><b>User Management</b></h3></a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/inviteuser">User Management - Invite User</a>
+        <h3 style="color: #DA4405;"><b> &nbsp Checkout Solutions</b></h3>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Introduction</a>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#widget">Widget</a>
+        <div id="widget" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+        </div>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Shop plugins</a>
         <hr>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/paymentinstrument"><h3><b>Payment Instruments</b></h3></a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/createpaymentinstrument">How to manage Payment Instruments</a>
-        <hr>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/risksetting"><h3><b>Manage risk settings</b></h3></a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/managenotification">How to manage Notifications</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/manageblacklist">How to manage blacklists</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/manageriskcard">How to manage risk cards</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/rulecomparison">Ruletype I: Comparison (simple)</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/rulevelocityrisk">Ruletype II: Limits (velocity) Risks</a>
-        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/merchantcenter/gicc">Messages by External Systems<br/>( GICC )</a>
-        <br/>
+        <h3 style="color: #DA4405;"><b> &nbsp API Reference</b></h3>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Introduction</a>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Endpoints</a>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Authentication</a>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#managetokanization">Manage tokanization</a>
+        <div id="managetokanization" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+        </div>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#manageorders">Manage orders</a>
+        <div id="manageorders" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+        </div>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#managecustomers">Manage customers</a>
+        <div id="managecustomers" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+        </div>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#manageinstallments">Manage installments</a>
+        <div id="manageinstallments" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+        </div>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#managesettlements">Manage settlements</a>
+        <div id="managesettlements" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+        </div>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Healthcheck</a>
+        <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#errorhandling">Error Handling</a>
+        <div id="errorhandling" class="collapse" >
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - Inline widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Modal widget</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Widget as a bridge</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Testing</a><br>
+        </div>
+        <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > Testing</a>
     </div>
     <div class="col-md-8">
-        <div ng-show="cur=='registration'">
-            <div  ng-include="'/partials/merchant/registration.html'">
+        <div ng-show="cur=='generaldescription'">
+            <div  ng-include="'/partials/integration/generaldescription.html'">
             </div>
         </div>
         <div ng-show="cur=='login'">

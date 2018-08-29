@@ -36,7 +36,7 @@ angular.module('StudyCraneApp',[
   .when('/faq', {templateUrl: 'partials/faq.html'})
   .when('/contact', {templateUrl: 'partials/contact.html'})
   .when('/merchantcenter', {templateUrl: 'partials/merchantcenter.html', controller:'merchantcenterCtrl'})
-  .when('/integration', {templateUrl: 'partials/integration.html', controller:'merchantcenterCtrl'})
+  .when('/integration', {templateUrl: 'partials/integration.html', controller:'integrationCtrl'})
   .when('/merchantcenter/:id', {templateUrl: 'partials/merchantcenter.html', controller:'merchantcenterCtrl'});
 
 	$httpProvider.defaults.useXDomain = true;
@@ -203,6 +203,16 @@ console.log("trying start REDOCS");
 }])
 .controller('outoftheboxCtrl', ['$rootScope', '$scope', '$http','backendService', '$timeout', function($rootScope, $scope, $http, backendService, $timeout) {
 	$rootScope.site = "oob";
+}])
+.controller('integrationCtrl', ['$rootScope', '$scope', '$http','backendService', '$timeout', '$routeParams', function($rootScope, $scope, $http, backendService, $timeout, $routeParams) {
+  $rootScope.site = "integration";
+
+  if($routeParams.id)
+    $scope.cur = $routeParams.id;
+  else
+    $scope.cur ="generaldescription";
+
+  
 }])
 .controller('merchantcenterCtrl', ['$rootScope', '$scope', '$http','backendService', '$timeout', '$routeParams', function($rootScope, $scope, $http, backendService, $timeout, $routeParams) {
 	$rootScope.site = "mc";
