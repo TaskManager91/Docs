@@ -217,6 +217,7 @@ console.log("trying start REDOCS");
       var swagger = jQuery.parseJSON(JSON.stringify(data));;
       buffer = swagger.data.paths[endpoint];
       $scope.endpoint = buffer[method];
+      $scope.parameter = swagger.data.definitions.OrderOpenRequest;
     });
     
   }

@@ -13,14 +13,28 @@
 			<div class="col-md-10">
 				<div style="background-color: rgba(0, 170, 19, 0.1);">
 					<br>
-					<p style="color:rgb(0, 170, 19);">&nbsp &nbsp &nbsp<b>&nbsp 200</b>  {{endpoint.responses[200]}}</p>
+					<p style="color:rgb(0, 170, 19);">&nbsp &nbsp &nbsp<b>&nbsp 200</b>  {{endpoint.responses[200].description}}</p>
 					<br>
 				</div>
 				<br>
 				<div style="background-color: rgba(229, 57, 53, 0.1);">
 					<br>
-					<p style="color: rgba(229, 57, 53);">&nbsp &nbsp &nbsp<b>&nbsp 403</b> &nbsp The health endpoint is disabled via configuration.</p>
+					<p style="color: rgba(229, 57, 53);">&nbsp &nbsp &nbsp<b>&nbsp 400</b> {{endpoint.responses[400].description}}</p>
 					<br>
+				</div>
+			</div>
+			<div class="col-md-1">
+			</div>
+		</div>
+		<br>
+		<h3>Parameters</h3>
+		<br>
+		<div class="row">
+			<div class="col-md-1">
+			</div>
+			<div class="col-md-10">
+				<div ng-repeat="param in parameter.properties">
+					{{param}}
 				</div>
 			</div>
 			<div class="col-md-1">
