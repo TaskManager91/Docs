@@ -208,6 +208,19 @@ console.log("trying start REDOCS");
 .controller('integrationCtrl', ['$rootScope', '$scope', '$http','backendService', '$timeout', '$routeParams', function($rootScope, $scope, $http, backendService, $timeout, $routeParams) {
   $rootScope.site = "integration";
 
+  
+
+  $scope.setEndpoint = function(endpoint, method){
+    $scope.endpointName = endpoint;
+    $scope.method = method;
+    $http.get('content/swagger.json').then(function (data){
+      var swagger = jQuery.parseJSON(JSON.stringify(data));;
+      buffer = swagger.data.paths[endpoint];
+      $scope.endpoint = buffer[method];
+    });
+    
+  }
+
   if($routeParams.id)
     $scope.cur = $routeParams.id;
   else

@@ -3,10 +3,10 @@
     <div ng-init="menu=true;" class="col-md-2 btn-group-vertical">
         <h3 style="color: #DA4405;"><b> &nbsp Getting started</b></h3>
         <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#introduction">Introduction</a>
-        <div id="introduction" class="collapse in" >
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" > &nbsp  - General Description</a><br>
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Integration Options</a><br>
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Onboarding process</a><br>
+        <div id="introduction" class="collapse in" style="background-color: #DCDCDC !important;">
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/generaldescription" style="background-color: #DCDCDC !important;"> &nbsp  - General Description</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" style="background-color: #DCDCDC !important;"> &nbsp - Integration Options</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" style="background-color: #DCDCDC !important;"> &nbsp  - Onboarding process</a><br>
         </div>
         <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#datamodel">Data model</a>
         <div id="datamodel" class="collapse" >
@@ -54,7 +54,7 @@
         </div>
         <a type="button" ng-show="menu" data-toggle="collapse" class="btn btn-light text-left myPanel" data-target="#manageorders">Manage orders</a>
         <div id="manageorders" class="collapse" >
-            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/preauth" > &nbsp  - Preauth</a><br>
+            <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/preauth"> &nbsp  - Preauth</a><br>
             <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/dashboard" > &nbsp - Debit</a><br>
             <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Credit</a><br>
             <a type="button" ng-show="menu" class="btn btn-light text-left" href="/integration/createtransaction" > &nbsp  - Cancel</a><br>
@@ -106,7 +106,7 @@
             </div>
         </div>
         <div ng-show="cur=='preauth'">
-            <div  ng-include="'/partials/integration/preauth.html'">
+            <div  ng-include="'/partials/integration/preauth.html'"  onload="setEndpoint('/orders/preauth', 'post')">
             </div>
         </div>
         <div ng-show="cur=='health'">
